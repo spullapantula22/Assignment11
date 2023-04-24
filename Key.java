@@ -15,14 +15,14 @@ public class Key {
 	
     @Override
     public boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
+        if (obj == null) {
+            return false;
         }
         if (!(obj instanceof Key)) {
             return false;
         }
-        Key key = (Key) obj;
-        return firstName.equals(key.firstName) && lastName.equals(key.lastName);
+        Key k = (Key) obj;
+        return firstName.equals(k.firstName) && lastName.equals(k.lastName);
     }
 	
     @Override
